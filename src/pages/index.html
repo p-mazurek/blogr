@@ -1,153 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
 
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
+<body>
+  <header class="hero">
+    <div class="hero__navbar">
+      <a class="hero__logo" href="#">Blogr</a>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+      <!-- desktop navigation -->
 
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-  </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
+      <nav class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Product</a>
+            <ul class="submenu">
+              <li class="submenu__item"><a class="submenu__link" href="#">Overview</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Pricing</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Marketplace</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Features</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Integrations</a></li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Company</a>
+            <ul class="submenu">
+              <li class="submenu__item"><a class="submenu__link" href="#">About</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Team</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Blog</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Careers</a></li>
+            </ul>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="#">Connect</a>
+            <ul class="submenu">
+              <li class="submenu__item"><a class="submenu__link" href="#">Contact</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">Newsletter</a></li>
+              <li class="submenu__item"><a class="submenu__link" href="#">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- mobile navigation -->
+      <div class="mobile">
+        <nav class="navigation navigation--mobile">
+          <ul class="navigation__list navigation__list--mobile">
+            <li class="navigation__item navigation__item--mobile">
+              <a class="navigation__link navigation__link--mobile" href="#">Product</a>
+              <ul class="submenu submenu--mobile">
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Overview</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Pricing</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Marketplace</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Features</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Integrations</a></li>
+              </ul>
+            </li>
+            <li class="navigation__item navigation__item--mobile">
+              <a class="navigation__link navigation__link--mobile" href="#">Company</a>
+              <ul class="submenu submenu--mobile">
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">About</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Team</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Blog</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Careers</a></li>
+              </ul>
+            </li>
+            <li class="navigation__item navigation__item--mobile">
+              <a class="navigation__link navigation__link--mobile" href="#">Connect</a>
+              <ul class="submenu submenu--mobile">
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Contact</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">Newsletter</a></li>
+                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
+                    href="#">LinkedIn</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="account--mobile">
+          <button class="account__button--mobile account__button--login">Login</button>
+          <button class="account__button--mobile account__button--signup">Sign Up</button>
+        </div>
+      </div>
+
+
+      <div class="account">
+        <button class="account__button account__button--login">Login</button>
+        <button class="account__button account__button--signup">Sign Up</button>
+      </div>
+
+      <!-- hamburger -->
+
+      <div class="hamburger">
+        <button class="hamburger__button"><i class="fas fa-bars"></i></button>
+      </div>
     </div>
-  </body>
+    <h1 class="hero__title">A modern publishing platform</h1>
+    <p class="hero__description">Grow your audience and build your online brand</p>
+    <div class="hero__links">
+      <a href="#" class="hero__link">Start for Free</a>
+      <a href="#" class="hero__link hero__link--special">Learn More</a>
+    </div>
+  </header>
+  <section class="about">
+    <h2 class="about__title">Designed for the future</h2>
+    <div class="wrapper">
+      <section class="capabilities">
+        <h3 class="capabilities__title">Introducing an extensible editor</h3>
+        <p class="capabilities__description"> Blogr features an exceedingly intuitive interface which lets you focus on
+          one thing: creating content.
+          The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+          videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+          change the looks of a blog.</p>
+      </section>
+    </div>
+    <div class="wrapper">
+      <section class="capabilities">
+        <h3 class="capabilities__title">Robust content management</h3>
+        <p class="capabilities__description">Flexible content management enables users to easily move through posts.
+          Increase the usability of your blog
+          by adding customized categories, sections, format, or flow. With this functionality, you’re in full control..
+        </p>
+      </section>
+    </div>
+    <div class="wrapper wrapper--special">
+      <div class="wrapper__phones"></div>
+      <section class="capabilities capabilities--special">
+        <h3 class="capabilities__title"> State of the Art Infrastructure</h3>
+        <p class="capabilities__description">With reliability and speed in mind, worldwide data centers provide the
+          backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </section>
+    </div>
+    <div class="wrapper">
+      <section class="capabilities">
+        <h3 class="capabilities__title">Free, open, simple</h3>
+        <p class="capabilities__description">Blogr is a free and open source application backed by a large community of
+          helpful developers. It supports
+          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+        </p>
+      </section>
+    </div>
+    <div class="wrapper">
+      <section class="capabilities">
+        <h3 class="capabilities__title">Powerful tooling</h3>
+        <p class="capabilities__description">Batteries included. We built a simple and straightforward CLI tool that
+          makes customization and deployment a breeze,
+          but capable of producing even the most complicated sites.
+        </p>
+      </section>
+    </div>
+  </section>
+  <footer class="footer">
+    <a class="hero__logo" href="#">Blogr</a>
+    <div class="footer__list">
+      <a href="" class="footer__link">Product</a>
+      <a href="" class="footer__link">Overview</a>
+      <a href="" class="footer__link">Pricing</a>
+      <a href="" class="footer__link">Marketplace</a>
+      <a href="" class="footer__link">Features</a>
+      <a href="" class="footer__link">Integrations</a>
+    </div>
+    <div class="footer__list">
+      <a href="" class="footer__link">Company</a>
+      <a href="" class="footer__link">About</a>
+      <a href="" class="footer__link">Team</a>
+      <a href="" class="footer__link">Blog</a>
+      <a href="" class="footer__link">Careers</a>
+    </div>
+    <div class="footer__list">
+      <a href="" class="footer__link">Connect</a>
+      <a href="" class="footer__link">Contact</a>
+      <a href="" class="footer__link">Newsletter</a>
+      <a href="" class="footer__link">LinkedIn</a>
+    </div>
+  </footer>
+</body>
+
 </html>
