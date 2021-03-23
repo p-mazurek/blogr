@@ -1,0 +1,247 @@
+.account {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 3rem;
+    border-top: 1px solid white;
+    opacity: 0;
+    transition: .2s ease-in;
+
+    @media (orientation: landscape) {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__button {
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        padding: 2rem 1rem;
+        width: 20rem;
+        border-radius: 4rem;
+        font-size: 2.5rem;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+    }
+}
+
+
+
+.hamburger {
+    width: 9rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &--open {
+        >.hamburger__inner:nth-child(1) {
+            transform: translateY(-1px) rotate(135deg);
+        }
+
+        >.hamburger__inner:nth-child(2) {
+            transform: scale(0);
+        }
+
+        >.hamburger__inner:nth-child(3) {
+            transform: translateY(-10px) rotate(-135deg);
+        }
+    }
+
+    &__inner {
+        width: 5rem;
+        height: 3px;
+        border-radius: 3px;
+        background-color: #fff;
+        margin-bottom: 4px;
+        z-index: 11;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+            transition: .3s ease;
+        }
+
+    }
+}
+
+.hero {
+    background: url(/src/assets/img/bg-pattern-intro.svg) center no-repeat, linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-size: 300%;
+    color: white;
+    min-height: 80vh;
+    border-radius: 0 0 0 13rem;
+
+    &__description {
+        font-size: 2.2rem;
+        padding: 2rem 5rem;
+        font-weight: 300;
+    }
+
+    &__description,
+    &__title {
+        text-align: center;
+        font-family: "Overpass", sans-serif;
+        margin: 0;
+    }
+
+    &__links {
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__link {
+        font-family: 'Ubuntu', sans-serif;
+        width: 15rem;
+        text-decoration: none;
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 3rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        padding: 15rem 5rem 0;
+
+        @media (orientation: landscape) {
+            padding: 10rem 5rem 0;
+        }
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    padding: 3rem 3rem 0;
+    z-index: 10;
+    transition: all .2s linear;
+
+    &__logo {
+        text-decoration: none;
+        font-size: 4rem;
+        font-weight: 500;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+    }
+
+    &--sticky {
+        background-image: linear-gradient(150deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        padding: 3rem 2rem;
+        height: 10vh;
+        transition: all .2s linear;
+
+        >.hamburger--open {
+            padding-top: 4rem;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 0;
+    min-height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    clip-path: circle(100px at 100% -20%);
+    transition: all .5s linear;
+
+    &--active {
+        clip-path: circle(1000px at 100% -20%);
+        transition: all .5s linear;
+    }
+
+
+    &__arrow {
+        color: white;
+        font-size: 1.5rem;
+        transform: rotate(0);
+        transition: transform .4s linear;
+
+        &--active {
+            transform: rotate(-90deg);
+            transition: transform .4s linear;
+        }
+
+
+    }
+
+    &__item {
+        padding: 1rem 0;
+        opacity: 0;
+        transition: .2s linear;
+    }
+
+    &__link {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 12.5rem;
+        height: 4.5rem;
+        font-weight: 600;
+
+
+    }
+
+    &__list {
+        list-style: none;
+        font-size: 2.5rem;
+        font-family: 'Ubuntu', sans-serif;
+
+    }
+}
+
+.submenu {
+    opacity: 0;
+    height: 0;
+    list-style: none;
+    pointer-events: none;
+    transition: .4s linear;
+    overflow: hidden;
+    margin: 0;
+
+    &--active {
+        margin-left: 1rem;
+        height: 100%;
+        opacity: 1;
+        pointer-events: all;
+        transition: all .4s ease-in;
+    }
+
+    &__link {
+        color: white;
+        font-size: 2rem;
+    }
+}
+
+.fade {
+    opacity: 1;
+    transition: .5s linear .2s;
+}

@@ -5,112 +5,62 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Blogr</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
 
 <body>
-  <header class="hero">
-    <div class="hero__navbar">
-      <a class="hero__logo" href="#">Blogr</a>
 
-      <!-- desktop navigation -->
+  <div class="navbar">
+    <a class="navbar__logo" href="#">Blogr</a>
+    <div class="hamburger">
+      <div class="hamburger__inner"></div>
+      <div class="hamburger__inner"></div>
+      <div class="hamburger__inner"></div>
+    </div>
 
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Product</a>
-            <ul class="submenu">
-              <li class="submenu__item"><a class="submenu__link" href="#">Overview</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Pricing</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Marketplace</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Features</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Integrations</a></li>
-            </ul>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Company</a>
-            <ul class="submenu">
-              <li class="submenu__item"><a class="submenu__link" href="#">About</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Team</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Blog</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Careers</a></li>
-            </ul>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">Connect</a>
-            <ul class="submenu">
-              <li class="submenu__item"><a class="submenu__link" href="#">Contact</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">Newsletter</a></li>
-              <li class="submenu__item"><a class="submenu__link" href="#">LinkedIn</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- mobile navigation -->
-      <div class="mobile">
-        <nav class="navigation navigation--mobile">
-          <ul class="navigation__list navigation__list--mobile">
-            <li class="navigation__item navigation__item--mobile">
-              <a class="navigation__link navigation__link--mobile" href="#">Product</a>
-              <ul class="submenu submenu--mobile">
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Overview</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Pricing</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Marketplace</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Features</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Integrations</a></li>
-              </ul>
-            </li>
-            <li class="navigation__item navigation__item--mobile">
-              <a class="navigation__link navigation__link--mobile" href="#">Company</a>
-              <ul class="submenu submenu--mobile">
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">About</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Team</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Blog</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Careers</a></li>
-              </ul>
-            </li>
-            <li class="navigation__item navigation__item--mobile">
-              <a class="navigation__link navigation__link--mobile" href="#">Connect</a>
-              <ul class="submenu submenu--mobile">
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Contact</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">Newsletter</a></li>
-                <li class="submenu__item submenu__item--mobile"><a class="submenu__link submenu__link--mobile"
-                    href="#">LinkedIn</a></li>
-              </ul>
-            </li>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Product<i class="fas fa-chevron-left navigation__arrow"></i></a>
+          
+          <ul class="submenu">
+            <li class="submenu__item"><a class="submenu__link" href="#">Overview</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Pricing</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Marketplace</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Features</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Integrations</a></li>
           </ul>
-        </nav>
-
-        <div class="account--mobile">
-          <button class="account__button--mobile account__button--login">Login</button>
-          <button class="account__button--mobile account__button--signup">Sign Up</button>
-        </div>
-      </div>
-
-
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Company<i class="fas fa-chevron-left navigation__arrow"></i></a>
+          
+          <ul class="submenu">
+            <li class="submenu__item"><a class="submenu__link" href="#">About</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Team</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Blog</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Careers</a></li>
+          </ul>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Connect<i class="fas fa-chevron-left navigation__arrow"></i></a>
+         
+          <ul class="submenu">
+            <li class="submenu__item"><a class="submenu__link" href="#">Contact</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">Newsletter</a></li>
+            <li class="submenu__item"><a class="submenu__link" href="#">LinkedIn</a></li>
+          </ul>
+        </li>
+      </ul>
       <div class="account">
         <button class="account__button account__button--login">Login</button>
         <button class="account__button account__button--signup">Sign Up</button>
       </div>
+    </nav>
+  </div>
 
-      <!-- hamburger -->
-
-      <div class="hamburger">
-        <button class="hamburger__button"><i class="fas fa-bars"></i></button>
-      </div>
-    </div>
+  <header class="hero">
     <h1 class="hero__title">A modern publishing platform</h1>
     <p class="hero__description">Grow your audience and build your online brand</p>
     <div class="hero__links">
@@ -118,9 +68,11 @@
       <a href="#" class="hero__link hero__link--special">Learn More</a>
     </div>
   </header>
+
   <section class="about">
     <h2 class="about__title">Designed for the future</h2>
     <div class="wrapper">
+      <div class="wrapper__background"></div>
       <section class="capabilities">
         <h3 class="capabilities__title">Introducing an extensible editor</h3>
         <p class="capabilities__description"> Blogr features an exceedingly intuitive interface which lets you focus on
@@ -150,6 +102,7 @@
       </section>
     </div>
     <div class="wrapper">
+      <div class="wrapper__background"></div>
       <section class="capabilities">
         <h3 class="capabilities__title">Free, open, simple</h3>
         <p class="capabilities__description">Blogr is a free and open source application backed by a large community of
