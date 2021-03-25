@@ -3,6 +3,8 @@
 @import "_variables";
 @import "./modules/navbar.scss";
 @import "./modules/about.scss";
+@import "./modules/footer.scss";
+@import "./modules/animations.scss";
 
 * {
   margin: 0;
@@ -18,4 +20,27 @@
 
 html {
   font-size: 62.5%;
+}
+
+button, .hero__link {
+  position:relative;
+  cursor: pointer;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 5px;
+    background-color: none;
+    box-shadow: 10px 0px 5px white, 20px 0 5px white;
+    transform: skewX(-35deg);
+    transition: transform 0.5s linear;
+  }
+
+  &:hover::after {
+    transform: skewX(-35deg) translateX(23rem);
+    transition: transform 0.2s linear;
+  }
 }

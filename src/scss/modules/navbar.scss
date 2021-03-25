@@ -14,6 +14,14 @@
         justify-content: center;
     }
 
+    @media (min-width: $tablet) {
+        opacity: 1;
+        padding-top: 0;
+        border-top: none;
+        width: 30%;
+        gap: 0;
+    }
+
     &__button {
         border: 1px solid white;
         background-color: transparent;
@@ -24,6 +32,20 @@
         font-size: 2.5rem;
         font-family: 'Overpass', sans-serif;
         font-weight: 600;
+
+        &:last-child {
+            border: 1px solid hsl(353, 100%, 62%);
+            background-color: #fff;
+            color: hsl(353, 100%, 62%);
+        }
+
+        @media (min-width: $tablet) {
+            border: none;
+            font-weight: 300;
+            font-size: 2rem;
+            width: 15rem;
+            padding: 1rem 1rem;
+        }
     }
 }
 
@@ -37,6 +59,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    @media (min-width: $tablet) {
+        display: none;
+    }
 
     &--open {
         >.hamburger__inner:nth-child(1) {
@@ -111,14 +137,23 @@
         padding: 1.5rem 1rem;
         text-align: center;
         cursor: pointer;
+        overflow: hidden;
+
+        &:first-child {
+            background-color: white;
+            color: hsl(353, 100%, 62%);
+            animation: shakeBtn 10s linear infinite;
+            border: 1px solid hsl(353, 100%, 62%);
+        }
+
     }
 
     &__title {
         font-size: 4.5rem;
         padding: 15rem 5rem 0;
 
-        @media (orientation: landscape) {
-            padding: 10rem 5rem 0;
+        @media (min-width: $tablet) {
+            padding: 20rem 5rem 0;
         }
     }
 }
@@ -135,6 +170,11 @@
     padding: 3rem 3rem 0;
     z-index: 10;
     transition: all .2s linear;
+
+    @media (min-width: $tablet) {
+        justify-content: flex-start;
+        gap: 10%;
+    }
 
     &__logo {
         text-decoration: none;
@@ -166,11 +206,21 @@
     left: 0;
     width: 100%;
     padding: 2rem 0;
-    min-height: 100%;
+    height: 100%;
     overflow: hidden;
     background-image: linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     clip-path: circle(100px at 100% -20%);
     transition: all .5s linear;
+
+    @media (min-width: $tablet) {
+        flex: 1;
+        flex-direction: row;
+        position: static;
+        clip-path: none;
+        width: 40rem;
+        height: inherit;
+        background-image: none;
+    }
 
     &--active {
         clip-path: circle(1000px at 100% -20%);
@@ -196,6 +246,24 @@
         padding: 1rem 0;
         opacity: 0;
         transition: .2s linear;
+
+        @media (min-width: $tablet) {
+            opacity: 1;
+            margin-right: 3rem;
+
+            &:hover>.submenu {
+                margin-left: 1rem;
+                min-height: 24rem;
+                opacity: 1;
+                pointer-events: all;
+                transition: all .4s ease-in;
+            }
+
+            &:hover>.navigation__link>.navigation__arrow {
+                transform: rotate(-90deg);
+            }
+
+        }
     }
 
     &__link {
@@ -205,39 +273,88 @@
         justify-content: space-between;
         width: 12.5rem;
         height: 4.5rem;
-        font-weight: 600;
 
+        @media (min-width: $tablet) {
+            width: 10rem;
+
+        }
 
     }
 
     &__list {
         list-style: none;
         font-size: 2.5rem;
-        font-family: 'Ubuntu', sans-serif;
+        font-weight: 600;
+        font-family: 'Overpass', sans-serif;
+
+        @media (min-width: $tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-weight: 300;
+            font-size: 2rem;
+        }
 
     }
 }
 
 .submenu {
     opacity: 0;
-    height: 0;
+
     list-style: none;
     pointer-events: none;
     transition: .4s linear;
     overflow: hidden;
     margin: 0;
 
+
+    @media (min-width: $tablet) {
+        position: absolute;
+        overflow: visible;
+        color: hsl(353, 100%, 62%);
+        background-color: white;
+        padding: 2rem;
+        width: 17rem;
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
     &--active {
         margin-left: 1rem;
-        height: 100%;
+        width: 17rem;
+        min-height: 24rem;
         opacity: 1;
         pointer-events: all;
         transition: all .4s ease-in;
     }
 
+    &__item {
+        margin-top: 1rem;
+
+        @media (min-width: $tablet) {
+            margin-top: 1.5rem;
+            text-align: center;
+
+            &:hover {
+                transform: scale(1.2);
+                color: hsl(353, 67%, 37%);
+                font-weight: 600;
+                transition: all .3s ease;
+            }
+
+        }
+    }
+
     &__link {
         color: white;
         font-size: 2rem;
+
+        @media (min-width: $tablet) {
+            color: hsl(353, 100%, 62%);
+
+        }
     }
 }
 

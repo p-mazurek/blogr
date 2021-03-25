@@ -24,7 +24,7 @@
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__link" href="#">Product<i class="fas fa-chevron-left navigation__arrow"></i></a>
-          
+
           <ul class="submenu">
             <li class="submenu__item"><a class="submenu__link" href="#">Overview</a></li>
             <li class="submenu__item"><a class="submenu__link" href="#">Pricing</a></li>
@@ -35,7 +35,7 @@
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">Company<i class="fas fa-chevron-left navigation__arrow"></i></a>
-          
+
           <ul class="submenu">
             <li class="submenu__item"><a class="submenu__link" href="#">About</a></li>
             <li class="submenu__item"><a class="submenu__link" href="#">Team</a></li>
@@ -45,7 +45,7 @@
         </li>
         <li class="navigation__item">
           <a class="navigation__link" href="#">Connect<i class="fas fa-chevron-left navigation__arrow"></i></a>
-         
+
           <ul class="submenu">
             <li class="submenu__item"><a class="submenu__link" href="#">Contact</a></li>
             <li class="submenu__item"><a class="submenu__link" href="#">Newsletter</a></li>
@@ -71,6 +71,7 @@
 
   <section class="about">
     <h2 class="about__title">Designed for the future</h2>
+     <div class="flex-wrapper">
     <div class="wrapper">
       <div class="wrapper__background"></div>
       <section class="capabilities">
@@ -91,6 +92,7 @@
         </p>
       </section>
     </div>
+  </div>
     <div class="wrapper wrapper--special">
       <div class="wrapper__phones"></div>
       <section class="capabilities capabilities--special">
@@ -101,8 +103,9 @@
         </p>
       </section>
     </div>
-    <div class="wrapper">
-      <div class="wrapper__background"></div>
+    <div class="flex-wrapper">
+    <div class="wrapper" id="order">
+      <div class="wrapper__background order"></div>
       <section class="capabilities">
         <h3 class="capabilities__title">Free, open, simple</h3>
         <p class="capabilities__description">Blogr is a free and open source application backed by a large community of
@@ -121,11 +124,12 @@
         </p>
       </section>
     </div>
+  </div>
   </section>
-  <footer class="footer">
-    <a class="hero__logo" href="#">Blogr</a>
+  <section class="footer">
+    <a class="footer__logo" href="#">Blogr</a>
     <div class="footer__list">
-      <a href="" class="footer__link">Product</a>
+      <a href="" class="footer__link footer__link--special">Product</a>
       <a href="" class="footer__link">Overview</a>
       <a href="" class="footer__link">Pricing</a>
       <a href="" class="footer__link">Marketplace</a>
@@ -133,19 +137,19 @@
       <a href="" class="footer__link">Integrations</a>
     </div>
     <div class="footer__list">
-      <a href="" class="footer__link">Company</a>
+      <a href="" class="footer__link footer__link--special">Company</a>
       <a href="" class="footer__link">About</a>
       <a href="" class="footer__link">Team</a>
       <a href="" class="footer__link">Blog</a>
       <a href="" class="footer__link">Careers</a>
     </div>
     <div class="footer__list">
-      <a href="" class="footer__link">Connect</a>
+      <a href="" class="footer__link footer__link--special">Connect</a>
       <a href="" class="footer__link">Contact</a>
       <a href="" class="footer__link">Newsletter</a>
       <a href="" class="footer__link">LinkedIn</a>
     </div>
-  </footer>
+  </section>
 </body>
 
 </html>

@@ -1,8 +1,7 @@
 const hamburger = document.querySelector('.hamburger');
 const submenu = document.querySelectorAll('.submenu');
+const navigationItems = document.querySelectorAll('.navigation__item')
 
-
-hamburger.addEventListener('click', activateMenu)
 
 //sticky navbar
 window.addEventListener('scroll', () => {
@@ -12,52 +11,43 @@ window.addEventListener('scroll', () => {
 })
 
 
-//hamburger aniamtion
-const focusMenu = () => {
-    (hamburger.classList.contains('hamburger--open')) ? hamburger.classList.remove('hamburger--open'): hamburger.classList.add('hamburger--open')
-}
+//Event Listeners
+hamburger.addEventListener('click', activateMenu)
 
-function activateMenu() {
-    //show menu
+function activateMenu(e) {
+    e.preventDefault();
+    //change hamburger icon
+    (hamburger.classList.contains('hamburger--open')) ? hamburger.classList.remove('hamburger--open'): hamburger.classList.add('hamburger--open')
+
+    //show mobile menu
     const navigation = document.querySelector('.navigation');
-    const navigationItems = document.querySelectorAll('.navigation__item')
     const accountButtons = navigation.querySelector('.account')
 
     navigation.classList.toggle('navigation--active');
     accountButtons.classList.toggle('fade');
     navigationItems.forEach(item => item.classList.toggle('fade'));
 
-    //hamburger aniamtion
-    focusMenu()
-
-    //show submenu
-    activeNode()
-
     navigationItems.forEach(item => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+           
             let arrow = item.querySelector('.navigation__arrow')
-            let submenuItem = item.lastElementChild;
-            if (submenuItem.classList.contains('submenu--active')) {
-                submenuItem.classList.remove('submenu--active');
+            let submenuList = item.lastElementChild;
+            if (submenuList.classList.contains('submenu--active')) {
+                submenuList.classList.remove('submenu--active');
                 arrow.classList.remove('navigation__arrow--active')
-
+    
             } else {
-                activeNode()
-
-                submenuItem.classList.add('submenu--active')
+                let activeNode = document.querySelector('.submenu--active')
+                let activeArrow = document.querySelector('.navigation__arrow--active')
+                if (activeNode) {
+                    activeNode.classList.remove('submenu--active')
+                    activeArrow.classList.remove('navigation__arrow--active')
+                }
+                submenuList.classList.add('submenu--active')
                 arrow.classList.add('navigation__arrow--active')
             }
         })
-
     })
 
-    function activeNode() {
-        let activeNode = document.querySelector('.submenu--active')
-        let activeArrow = document.querySelector('.navigation__arrow--active')
-        if (activeNode) {
-            activeNode.classList.remove('submenu--active')
-            activeArrow.classList.remove('navigation__arrow--active')
-        }
-
-    }
 }
+
