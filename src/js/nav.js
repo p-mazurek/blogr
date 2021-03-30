@@ -1,6 +1,8 @@
 const hamburger = document.querySelector('.hamburger');
 const submenu = document.querySelectorAll('.submenu');
-const navigationItems = document.querySelectorAll('.navigation__item')
+const navigationItems = document.querySelectorAll('.navigation__item');
+const signButtons = document.querySelectorAll('.account > button');
+
 
 
 //sticky navbar
@@ -12,6 +14,34 @@ window.addEventListener('scroll', () => {
 
 
 //Event Listeners
+signButtons.forEach(button => {
+    const login = document.querySelector('.login');
+    const register = document.querySelector('.register');
+
+    button.addEventListener('click', () => {
+        if (button.classList.contains('account__button--login')) {
+            if (login.classList.contains('inactive')) {
+                login.classList.remfgove('inactive');
+                login.classList.add('active');
+                register.classList.add('inactive');
+                register.classList.remove('active')
+            } else {
+                login.classList.add('inactive');
+                login.classList.remove('active');
+            }
+        } else if (button.classList.contains('account__button--signup')) {
+            if (register.classList.contains('inactive')) {
+                register.classList.remove('inactive');
+                register.classList.add('active');
+                login.classList.add('inactive');
+                login.classList.remove('active');
+            } else {
+                register.classList.add('inactive');
+                register.classList.remove('active');
+            }
+        }
+    })
+})
 hamburger.addEventListener('click', activateMenu)
 
 function activateMenu(e) {
@@ -29,13 +59,13 @@ function activateMenu(e) {
 
     navigationItems.forEach(item => {
         item.addEventListener('click', (e) => {
-           
+
             let arrow = item.querySelector('.navigation__arrow')
             let submenuList = item.lastElementChild;
             if (submenuList.classList.contains('submenu--active')) {
                 submenuList.classList.remove('submenu--active');
                 arrow.classList.remove('navigation__arrow--active')
-    
+
             } else {
                 let activeNode = document.querySelector('.submenu--active')
                 let activeArrow = document.querySelector('.navigation__arrow--active')
@@ -50,4 +80,3 @@ function activateMenu(e) {
     })
 
 }
-

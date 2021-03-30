@@ -96,7 +96,7 @@
 }
 
 .hero {
-    background: url(/src/assets/img/bg-pattern-intro.svg) center no-repeat, linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background: url(../assets/img/bg-pattern-intro.svg) center no-repeat, linear-gradient(130deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     background-size: 300%;
     color: white;
     min-height: 80vh;
@@ -300,12 +300,13 @@
 
 .submenu {
     opacity: 0;
-
     list-style: none;
     pointer-events: none;
     transition: .4s linear;
     overflow: hidden;
     margin: 0;
+    max-height:0;
+    transition: all .3s ease-out;
 
 
     @media (min-width: $tablet) {
@@ -317,17 +318,17 @@
         width: 17rem;
         display: flex;
         flex-direction: column;
+        min-height: 24rem;
 
 
     }
 
     &--active {
         margin-left: 1rem;
-        width: 17rem;
-        min-height: 24rem;
+        max-height: 100%;
         opacity: 1;
         pointer-events: all;
-        transition: all .4s ease-in;
+        transition: all .3s ease-in;
     }
 
     &__item {

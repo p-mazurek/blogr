@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
 @import "_variables";
 @import "./modules/navbar.scss";
+@import "./modules/account-action.scss";
 @import "./modules/about.scss";
 @import "./modules/footer.scss";
 @import "./modules/animations.scss";
@@ -26,6 +27,7 @@ button, .hero__link {
   position:relative;
   cursor: pointer;
   overflow: hidden;
+  transition: transform 0.3s linear;
   &::after {
     content: "";
     position: absolute;
@@ -36,11 +38,11 @@ button, .hero__link {
     background-color: none;
     box-shadow: 10px 0px 5px white, 20px 0 5px white;
     transform: skewX(-35deg);
-    transition: transform 0.5s linear;
+    transition: transform 0.3s linear;
   }
 
   &:hover::after {
-    transform: skewX(-35deg) translateX(23rem);
+    transform: skewX(-35deg) translateX(30rem);
     transition: transform 0.2s linear;
   }
 }
