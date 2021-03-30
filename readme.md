@@ -1,18 +1,14 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
 
-# WTF Webpack Starter Kit 
 
-Simple toolkit for your static websites development.
+# Weekly webdev challenge #3
 
-## How to use it?
+Hello! 😊 Here is my interpretation of the responsive landing page.
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+used tools: HTML, SCSS, JS, WEBPACK(for live server & compilation scss)
 
-## Available scripts
+## Enjoy ! 🔥
 
-`npm run start` - runs development mode
 
-`npm run build` - runs build process for production
 
-`npm run publish` - runs build process and publish the page using `gh-pages` branch
+
 

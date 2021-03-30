@@ -1,4 +1,5 @@
-.active {
+.login.active,
+.register.active {
     opacity: 1;
     pointer-events: all;
     display: flex;
@@ -14,6 +15,7 @@
     z-index: 20;
 
     @media (min-width: $tablet) {
+        opacity: 1;
         background-image: linear-gradient(-10deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
         top: 50%;
         left: 50%;
@@ -24,7 +26,7 @@
     }
 
     &>h3 {
-        margin-top: 15%;
+        margin:2rem 0;
         color: white;
         font-size: 4rem;
 
@@ -40,6 +42,15 @@
     margin: 2.5rem;
 }
 
+.fa-times {
+    color: white;
+    font-size: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
 .form {
     width: 90%;
     height: 90%;
@@ -47,7 +58,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2%;
+    // gap: S%;
 
     &__button {
         padding: 2rem 4.5rem;
@@ -56,11 +67,12 @@
         text-align: center;
         font-size: 3rem;
         color: white;
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
-    &__check{
+
+    &__check {
         margin-left: 1rem;
-        
+
     }
 
     &__container,
@@ -76,8 +88,8 @@
 
     &__input {
         font-family: "Overpass", sans-serif;
-        font-size: 2.5rem;
-        padding: 3rem 4rem;
+        font-size: 2rem;
+        padding: 1rem 3rem;
         border: none;
         color: hsl(353, 100%, 62%);
 
@@ -85,7 +97,11 @@
             color: hsl(13, 100%, 72%);
         }
     }
-
+&__recover {
+    display: block;
+    padding: 0 3rem;
+    text-align: center;
+}
     &__recover,
     &__check {
         color: white;
@@ -102,15 +118,13 @@
     }
 }
 
-.inactive {
-    opacity: 0;
-    pointer-events: none;
-    max-height: 0;
-}
 
 .login,
 .register {
     font-family: "Overpass", sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
 }
 
 .register.active {

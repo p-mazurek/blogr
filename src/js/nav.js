@@ -2,6 +2,7 @@ const hamburger = document.querySelector('.hamburger');
 const submenu = document.querySelectorAll('.submenu');
 const navigationItems = document.querySelectorAll('.navigation__item');
 const signButtons = document.querySelectorAll('.account > button');
+const closeButtons = document.querySelectorAll('.fa-times');
 
 
 
@@ -20,28 +21,21 @@ signButtons.forEach(button => {
 
     button.addEventListener('click', () => {
         if (button.classList.contains('account__button--login')) {
-            if (login.classList.contains('inactive')) {
-                login.classList.remfgove('inactive');
-                login.classList.add('active');
-                register.classList.add('inactive');
-                register.classList.remove('active')
-            } else {
-                login.classList.add('inactive');
-                login.classList.remove('active');
-            }
-        } else if (button.classList.contains('account__button--signup')) {
-            if (register.classList.contains('inactive')) {
-                register.classList.remove('inactive');
-                register.classList.add('active');
-                login.classList.add('inactive');
-                login.classList.remove('active');
-            } else {
-                register.classList.add('inactive');
-                register.classList.remove('active');
-            }
+            login.classList.toggle('active');
+            register.classList.remove('active')
+        } else {
+            register.classList.toggle('active');
+            login.classList.remove('active');
         }
     })
+});
+closeButtons.forEach(button => {
+    let parentSection = button.parentElement;
+    button.addEventListener('click', () => {
+        parentSection.classList.remove('active')
+    })
 })
+
 hamburger.addEventListener('click', activateMenu)
 
 function activateMenu(e) {
